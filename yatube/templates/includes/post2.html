@@ -8,8 +8,8 @@
       </li>
     </ul>
     <p>{{ post.text }}</p>
-      {% if post.group %} 
+      <!-- {% if post.group %} -->
         <a href="{% url 'posts:group_posts' post.group.slug %}">все записи группы</a>
-      {% endif %}
+      <!-- {% endif %} -->
     {% if not forloop.last %}<hr>{% endif %}
 </article>
