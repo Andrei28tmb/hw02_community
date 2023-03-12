@@ -3,6 +3,8 @@ from .models import Post, Group
 
 
 POSTS = 10
+
+
 def index(request):
     posts = Post.objects.order_by('-pub_date')[:POSTS]
     context = {
@@ -21,6 +23,7 @@ def group_posts(request, slug):
         'posts': posts,
     }
     return render(request, 'posts/group_list.html', context)
+
 
 def group_list(request):
     title = 'Информация о группах проекта Yatube'
