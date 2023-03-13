@@ -23,11 +23,3 @@ def group_posts(request, slug):
         'posts': posts,
     }
     return render(request, 'posts/group_list.html', context)
-
-
-def group_list(request):
-    title = 'Информация о группах проекта Yatube'
-    context = {
-        'title': title,
-    }
-    return (request, 'posts/group_list.html', context)
